@@ -47,10 +47,20 @@ const Index = () => {
                 </Button>
               </a>
               <Link to="/menu">
-                <Button size="lg" variant="outline" className="gap-2 text-base px-8 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground">
-                  View Menu
-                  <ChevronRight className="w-4 h-4" />
-                </Button>
+                <Button
+  size="lg"
+  className="
+    gap-2 text-base px-8
+    bg-primary-foreground/10
+    text-primary-foreground
+    border border-primary-foreground/30
+    hover:bg-primary-foreground/10
+    hover:text-primary-foreground
+  "
+>
+  View Menu
+  <ChevronRight className="w-4 h-4" />
+</Button>
               </Link>
             </div>
           </motion.div>
@@ -65,7 +75,7 @@ const Index = () => {
             {[
               { value: "5+", label: "Outlets" },
               { value: "4.0", label: "Rating ⭐" },
-              { value: "965+", label: "Reviews" },
+              { value: "2000+", label: "Reviews" },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
                 <p className="text-2xl md:text-3xl font-display font-bold text-primary-foreground">{stat.value}</p>
@@ -217,9 +227,19 @@ const Index = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Button size="lg" variant="outline" className="gap-2 px-8 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground">
-                  WhatsApp Us
-                </Button>
+               <Button
+  size="lg"
+  className="
+    gap-2 px-8
+    bg-primary-foreground/10
+    text-primary-foreground
+    border border-primary-foreground/30
+    hover:bg-primary-foreground/10
+    hover:text-primary-foreground
+  "
+>
+  WhatsApp Us
+</Button>
               </a>
             </div>
           </motion.div>

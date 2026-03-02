@@ -10,12 +10,14 @@ const OutletCard = ({ outlet, index }: { outlet: Outlet; index: number }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.4, delay: index * 0.08 }}
-      className="bg-card rounded-xl border border-border overflow-hidden hover:shadow-xl transition-all duration-300 group"
+      className="bg-card rounded-xl border border-border overflow-hidden hover:shadow-xl transition-all duration-300 group h-full"
     >
       {/* Color accent bar */}
       <div className="h-1.5 bg-primary" />
 
-      <div className="p-6">
+      {/* CONTENT */}
+      <div className="p-6 flex flex-col h-full">
+        {/* Header */}
         <div className="flex items-start justify-between gap-3 mb-3">
           <div>
             <span className="text-xs font-medium text-accent uppercase tracking-wider">
@@ -31,8 +33,12 @@ const OutletCard = ({ outlet, index }: { outlet: Outlet; index: number }) => {
           </div>
         </div>
 
-        <p className="text-sm text-muted-foreground mb-4 leading-relaxed">{outlet.description}</p>
+        {/* Description */}
+        <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+          {outlet.description}
+        </p>
 
+        {/* Details */}
         <div className="space-y-2 text-sm text-muted-foreground mb-4">
           <div className="flex items-start gap-2">
             <MapPin className="w-4 h-4 text-primary shrink-0 mt-0.5" />
@@ -48,6 +54,7 @@ const OutletCard = ({ outlet, index }: { outlet: Outlet; index: number }) => {
           </div>
         </div>
 
+        {/* Features */}
         <div className="flex flex-wrap gap-1.5 mb-5">
           {outlet.features.map((feature) => (
             <span
@@ -59,15 +66,17 @@ const OutletCard = ({ outlet, index }: { outlet: Outlet; index: number }) => {
           ))}
         </div>
 
-        <div className="flex gap-2">
+        {/* ACTION BUTTONS — ALWAYS AT BOTTOM */}
+        <div className="flex gap-2 mt-auto">
           <a href={`tel:${outlet.phone.replace(/\s/g, "")}`} className="flex-1">
             <Button variant="default" size="sm" className="w-full gap-1.5">
               <Phone className="w-3.5 h-3.5" />
               Call
             </Button>
           </a>
+
           <a
-            href={`https://www.google.com/maps/search/${encodeURIComponent(outlet.address)}`}
+            href={outlet.mapUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="flex-1"

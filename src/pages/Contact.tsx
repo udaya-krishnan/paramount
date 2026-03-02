@@ -32,7 +32,7 @@ const Contact = () => {
               <div className="space-y-4">
                 {[
                   { icon: MapPin, label: "Address", value: "Kadambazhipuram Junction, Kadampazhipuram, Kerala 678633" },
-                  { icon: Phone, label: "Phone", value: "099466 66541", href: "tel:09946666541" },
+                  { icon: Phone, label: "Phone", value: "09946666541", href: "tel:09946666541" },
                   { icon: Mail, label: "Email", value: "info@paramountgroup.in", href: "mailto:info@paramountgroup.in" },
                   { icon: Clock, label: "Hours", value: "Mon – Sun: 11:00 AM – 11:00 PM" },
                 ].map(({ icon: Icon, label, value, href }) => (
@@ -78,7 +78,7 @@ const Contact = () => {
               className="rounded-xl overflow-hidden border border-border shadow-lg h-[400px] md:h-full min-h-[400px]"
             >
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.5!2d76.3!3d10.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDQ4JzAwLjAiTiA3NsKwMTgnMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567890"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26731.935229920215!2d76.41142783476563!3d10.890414523191442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7d753fce6365d%3A0x28a73fb422774733!2sParamount%20restaurant%20and%20supermarket!5e1!3m2!1sen!2sin!4v1772441428495!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -90,14 +90,16 @@ const Contact = () => {
             </motion.div>
           </div>
 
+          {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26731.935229920215!2d76.41142783476563!3d10.890414523191442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7d753fce6365d%3A0x28a73fb422774733!2sParamount%20restaurant%20and%20supermarket!5e1!3m2!1sen!2sin!4v1772441428495!5m2!1sen!2sin" width="600" height="450" style="border:0;" all */}
+
           {/* Additional Info */}
-          <div className="bg-warm-section rounded-xl p-8 text-center">
+          {/* <div className="bg-warm-section rounded-xl p-8 text-center">
             <SectionHeading
               subtitle="Pricing"
               title="₹200 – ₹400 per person"
               description="Enjoy a full dining experience at an affordable price range. Family-friendly, vegetarian options available, and high chairs for kids."
             />
-          </div>
+          </div> */}
         </div>
       </section>
     </Layout>
